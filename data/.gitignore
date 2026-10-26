@@ -1,0 +1,38 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+build/
+
+# ---------- Streamlit ----------
+# Keep config.toml, but never commit secrets
+.streamlit/secrets.toml
+
+# ---------- SQL / databases ----------
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.dump
+*.bak
+
+# ---------- Secrets / env ----------
+.env
+.env.*
+!.env.example
+
+# ---------- Data & logs (adjust as needed) ----------
+*.log
+data/raw/
+
+# ---------- OS / editor ----------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
