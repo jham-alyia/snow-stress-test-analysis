@@ -96,4 +96,8 @@ if __name__ == "__main__":
     weather = clean_weather()
     weather.to_csv(f"{PROCESSED_DIR}/weather_daily.csv", index=False)
     print(f"weather_daily: {len(weather)} rows, {weather['date'].min()} to {weather['date'].max()}")
+
+    ## check when both days are in the table
+    shared = set(traffic["date"]) & set(weather["date"])
+    print(f"days in both tables: {len(shared)}")
  
