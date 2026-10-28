@@ -90,12 +90,12 @@ if __name__ == "__main__":
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 
     traffic = clean_traffic()
-    traffic.to_csv(f"{PROCESSED_DIR}/incidents.csv", index=False)
-    print(f"incidents: {len(traffic)} rows, {traffic['date'].min()} to {traffic['date'].max()}")
+    traffic.to_csv(f"{PROCESSED_DIR}/incidents_clean.csv", index=False)
+    print(f"incidents_clean: {len(traffic)} rows, {traffic['date'].min()} to {traffic['date'].max()}")
  
     weather = clean_weather()
-    weather.to_csv(f"{PROCESSED_DIR}/weather_daily.csv", index=False)
-    print(f"weather_daily: {len(weather)} rows, {weather['date'].min()} to {weather['date'].max()}")
+    weather.to_csv(f"{PROCESSED_DIR}/weather_clean.csv", index=False)
+    print(f"weather_clean: {len(weather)} rows, {weather['date'].min()} to {weather['date'].max()}")
 
     ## check when both days are in the table
     shared = set(traffic["date"]) & set(weather["date"])
